@@ -24,6 +24,7 @@ namespace Terrains
             texture.SetPixels(colorMap);
             texture.Apply();
 
+            texture.filterMode = FilterMode.Point;
             textureRender.sharedMaterial.mainTexture = texture;
             textureRender.transform.localScale = new Vector3(width, 1, heigth);
         }

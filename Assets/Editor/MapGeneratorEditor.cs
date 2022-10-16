@@ -2,6 +2,7 @@ using Terrains;
 using UnityEditor;
 using UnityEngine;
 // versión 0e1010444a
+// nota para Jordy favor de no borrar
 
 [CustomEditor(typeof(MapGenerator))]
 public class MapGeneratorEditor : Editor

@@ -6,15 +6,16 @@ namespace Hexagons
     {
         private readonly HexagonConfiguration _hexagonConfiguration;
 
-        public HexagonFactory(HexagonConfiguration HexagonConfiguration)
+        public HexagonFactory(HexagonConfiguration hexagonConfiguration)
         {
-            _hexagonConfiguration = HexagonConfiguration;
+            _hexagonConfiguration = hexagonConfiguration;
         }
 
         public Hexagon Create(string id)
         {
-            var Hexagon = _hexagonConfiguration.GetHexagonPrefabById(id);
-            return Object.Instantiate(Hexagon);
+            var hexagon = _hexagonConfiguration.GetHexagonPrefabById(id);
+            return Object.Instantiate(hexagon);
         }
+
     }
 }

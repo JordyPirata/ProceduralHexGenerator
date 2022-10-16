@@ -6,12 +6,11 @@ namespace Terrains
 {
     public class Terrains : MonoBehaviour
     {
-        [SerializeField] private int size;
-
+        [SerializeField] private int largo;
+        [SerializeField] private int ancho;
         [SerializeField] private GameObject terrain;
-        private float radio = 0.8666f;//Z
+        private float radio = 0.86602f;//Z
         private float altura = 1.5f;//X
-        private Vector3 zero = Vector3.zero;
 
         private void Start()
         {
@@ -35,12 +34,15 @@ namespace Terrains
             */
             float alturaAlter = 0;
             float radioAlter = 0;
-            for (int i = 0; i < size; i++)
+            
+            for (int i = 0; i < ancho; i++)
             {
-                for (int j = 0; j < size; j++)
+                for (int j = 0; j < largo; j++)
                 {
                     var instantiateZero = Instantiate(terrain);
                     instantiateZero.transform.position = new Vector3(alturaAlter, 0, radioAlter);
+                   
+
                     alturaAlter += (altura * 2);
                 }
                 radioAlter += radio;

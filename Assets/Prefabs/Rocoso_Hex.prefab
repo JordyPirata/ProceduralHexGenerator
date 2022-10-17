@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1638430463057003166}
   - component: {fileID: 2383253326733905211}
   - component: {fileID: 502137133112162801}
-  - component: {fileID: -2404685599625868189}
+  - component: {fileID: 3340860882961127844}
   m_Layer: 0
   m_Name: Rocoso_Hex
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-2404685599625868189
+--- !u!114 &3340860882961127844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2159211587989231652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b227cb7bcafe7264687de64e5692af10, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c554cc4ed24d2da59b053e2e2dabca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: Rocks
+  id: 10
+  minHeight: 0.94
+  maxHeight: 0.96

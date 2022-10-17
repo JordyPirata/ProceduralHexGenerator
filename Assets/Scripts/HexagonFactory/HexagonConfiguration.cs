@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Hexagons
 {
@@ -26,5 +27,16 @@ namespace Hexagons
             return hexagon;
         }
 
+        public Hexagon GetHexagonPrefabByHeight(float height)
+        {
+            foreach (var hexagon in _hexagons)
+            {
+                if (height < hexagon.Max && height >= hexagon.Min)
+                {
+                    return hexagon;
+                }
+            }
+            throw new Exception($"Hexagono fuera de rango {height}");
+        }
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4878814813850495616}
   - component: {fileID: 8366231994127344933}
   - component: {fileID: 6052315518627942895}
-  - component: {fileID: -5989164565992270189}
+  - component: {fileID: -2172073282337080856}
   m_Layer: 0
   m_Name: Rocoso_Nieve_Hex
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-5989164565992270189
+--- !u!114 &-2172073282337080856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5259879553484501050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f375bb737c0f04d9c61ea1cad990c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c554cc4ed24d2da59b053e2e2dabca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: SnowyRocks
+  id: 11
+  minHeight: 0.96
+  maxHeight: 0.98

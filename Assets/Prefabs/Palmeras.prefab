@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6042209792946368636}
   - component: {fileID: 7238945269230567385}
   - component: {fileID: 4868691464842611475}
-  - component: {fileID: -6297242837624463783}
+  - component: {fileID: 3300103399056633940}
   m_Layer: 0
   m_Name: Palmeras
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-6297242837624463783
+--- !u!114 &3300103399056633940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6382143176622484166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc2f15918ba373e448b92cf16b225a85, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c554cc4ed24d2da59b053e2e2dabca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: Palms
+  id: 4
+  minHeight: 0.4
+  maxHeight: 0.5

@@ -17,5 +17,10 @@ namespace Hexagons
             return Object.Instantiate(hexagon);
         }
 
+        public Hexagon Create(float height)
+        {
+            var hexagon = _hexagonConfiguration.GetHexagonPrefabByHeight(height);
+            return Object.Instantiate(hexagon);
+        }
     }
 }

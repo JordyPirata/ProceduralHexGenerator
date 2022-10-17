@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5523299900472686453}
   - component: {fileID: 8865732153138280656}
   - component: {fileID: 6696183190547074074}
-  - component: {fileID: -5827214911937961223}
+  - component: {fileID: -2733360506816461979}
   m_Layer: 0
   m_Name: Pinos_Chicos_Hex
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-5827214911937961223
+--- !u!114 &-2733360506816461979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5182907951910727119}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f071b8a1b0531e4aa95efa3087dcc35, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c554cc4ed24d2da59b053e2e2dabca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: MiniPines
+  id: 6
+  minHeight: 0.6
+  maxHeight: 0.7

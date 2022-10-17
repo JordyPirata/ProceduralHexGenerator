@@ -1,4 +1,5 @@
-﻿namespace Hexagons
+﻿
+namespace Hexagons
 {
     public class CurveRiver : Hexagon
     {

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3799873506434572728}
   - component: {fileID: 221810283314441757}
   - component: {fileID: 2661891326494939863}
-  - component: {fileID: -3714507155369382980}
+  - component: {fileID: -1698193084752865245}
   m_Layer: 0
   m_Name: Rio_Hex
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-3714507155369382980
+--- !u!114 &-1698193084752865245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4607196157674994434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9abcb4935412dc8409e30b533b9d415f, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c554cc4ed24d2da59b053e2e2dabca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: River
+  id: 9
+  minHeight: 0.92
+  maxHeight: 0.94

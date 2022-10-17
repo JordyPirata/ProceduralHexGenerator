@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2692577794469263009}
   - component: {fileID: 1365204943643801860}
   - component: {fileID: 3825484491026992590}
-  - component: {fileID: -2779874463560669471}
+  - component: {fileID: -6149782807038705977}
   m_Layer: 0
   m_Name: Lago
   m_TagString: Untagged
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-2779874463560669471
+--- !u!114 &-6149782807038705977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3320883077311474715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ea71c16bf41514594585fa86319615, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c554cc4ed24d2da59b053e2e2dabca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: Lake
+  id: 2
+  minHeight: 0.1
+  maxHeight: 0.2

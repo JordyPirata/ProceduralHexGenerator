@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Terrains
 {
@@ -16,39 +17,12 @@ namespace Terrains
         public int seed;
         public Vector2 offset;
 
-
         public bool AutoUpdate;
 
-        public void GenerateMap()
+        public float[,] GenerateMap()
         {
             float[,] noiseMap = NoiseMapGeneration.GenerateNoiseMap(mapWidth, mapHeight, seed, noiseScale, octaves, persistance, lacunarity, offset);
-
-            MapDisplay display = FindObjectOfType<MapDisplay>();
-            display.DrawNoiseMap(noiseMap);
+            return noiseMap;
         }
-        private void OnValidate()
-        {
-            if (mapWidth < 1)
-            {
-                mapWidth = 1;
-            }
-            if (mapHeight < 1)
-            {
-                mapHeight = 1;
-            }
-            if (lacunarity < 1)
-            {
-                lacunarity = 1;
-            }
-            if (octaves < 0)
-            {
-                octaves = 0;
-            }
-
-        }
-    }
-    public struct TerrainType
-    {
-
     }
 }

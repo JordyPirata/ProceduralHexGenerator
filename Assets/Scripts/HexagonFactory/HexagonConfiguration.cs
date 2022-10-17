@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Object = UnityEngine.Object;
 
 namespace Hexagons
 {
@@ -10,16 +10,14 @@ namespace Hexagons
     {
         [SerializeField] private Hexagon[] _hexagons;
         private Dictionary<string, Hexagon> _idToHexagon;
-
         private void Awake()
         {
             _idToHexagon = new Dictionary<string, Hexagon>();
-            foreach (var Hexagon in _hexagons)
+            foreach (var hexagon in _hexagons)
             {
-                _idToHexagon.Add(Hexagon.Id, Hexagon);
+                _idToHexagon.Add(hexagon.id, hexagon);
             }
         }
-
         public Hexagon GetHexagonPrefabById(string id)
         {
             if (!_idToHexagon.TryGetValue(id, out Hexagon hexagon))
@@ -27,6 +25,18 @@ namespace Hexagons
                 throw new Exception($"Hexagon with id {id} does not exist");
             }
             return hexagon;
+        }
+
+        public Hexagon GetHexagonPrefabByHeight(float height)
+        {
+            foreach (var hexagon in _hexagons)
+            {
+                if (height < hexagon.Max && height >= hexagon.Min)
+                {
+                    return hexagon;
+                }
+            }
+            throw new Exception($"Hexagono fuera de rango {height}");
         }
     }
 }

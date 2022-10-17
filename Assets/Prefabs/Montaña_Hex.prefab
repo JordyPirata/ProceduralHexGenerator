@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7090351691324376592}
   - component: {fileID: 6181796153109367221}
   - component: {fileID: 8227743988508343679}
-  - component: {fileID: 6879146051186494403}
+  - component: {fileID: 354974309590330935}
   m_Layer: 0
   m_Name: "Monta\xF1a_Hex"
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6879146051186494403
+--- !u!114 &354974309590330935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7579045665679514794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a1226d6f9fe1de4e85b63d9519d5dca, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c554cc4ed24d2da59b053e2e2dabca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: Mountain
+  id: 3
+  minHeight: 0.2
+  maxHeight: 0.3

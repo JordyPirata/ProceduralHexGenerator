@@ -12,9 +12,6 @@ namespace Terrains
     }
     public class MapGenerator : MonoBehaviour
     {
-        public enum DrawMode { NoiseMap, StringMap }; 
-        public DrawMode drawMode;
-
         [SerializeField]
         public HexagonConfiguration _hexagonConfiguration;
         public int mapWidth;
@@ -39,37 +36,6 @@ namespace Terrains
         {
             _hexagonFactory = new HexagonFactory(Instantiate(_hexagonConfiguration));
         }
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                _hexagonFactory.Create("CurveRiver");
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                _hexagonFactory.Create("Desert");
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                _hexagonFactory.Create("Grass");
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                _hexagonFactory.Create("Jungle");
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha5))
-            {
-                _hexagonFactory.Create("Rocks");
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha6))
-            {
-                _hexagonFactory.Create("MiniPines");
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha7))
-            {
-                _hexagonFactory.Create("MiniSnowyPines");
-            }
-        }
 
         public void GenerateMap()
         {
@@ -88,16 +54,32 @@ namespace Terrains
                 }
             }
 
-            MapDisplay display = FindObjectOfType<MapDisplay>();
-            if (drawMode == DrawMode.NoiseMap)
-            {
-                display.DrawNoiseMap(noiseMap);
-            }
-            else if (drawMode == DrawMode.StringMap)
-            {
-                 
-            }
+            float radio = 0.86602f;//Z
+            float altura = 1.5f;//X
 
+            float alturaAlter = 0;
+            float radioAlter = 0;
+
+            for (int y = 0; y < mapHeight; y++)
+            {
+                for (int x = 0; x < mapWidth; x++)
+                {
+                    var instantiateZero = _hexagonFactory.Create(idMap[x,y]);
+                    instantiateZero.transform.position = new Vector3(alturaAlter, 0, radioAlter);
+
+
+                    alturaAlter += altura * 2;
+                }
+                radioAlter += radio;
+                if ((y % 2) == 0)
+                {
+                    alturaAlter = altura;
+                }
+                else
+                {
+                    alturaAlter = 0;
+                }
+            }
         }
 
         TerrainType ChooseTerrainType(float heigth)

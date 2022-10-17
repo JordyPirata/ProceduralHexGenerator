@@ -6,8 +6,5 @@ namespace Hexagons
     {
         [SerializeField]
         public string id;
-        [SerializeField]
-        public float heigth;
-
     }
 }
